@@ -1,0 +1,26 @@
+
+.flex {
+    display: flex;
+}
+
+.main-header img {
+    height: 70px;
+
+}
+
+.main-header h1 {
+    text-align: center;
+}
+.nav {
+    display: flex;
+    width: 100%;
+}
+
+.nav li {
+    list-style: none;
+    margin-right: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+}
