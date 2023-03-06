@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Nav from './components/Nav';
 // eslint-disable-next-line import/no-named-as-default
 import Rockets from './pages/Rockets';
 import Missions from './pages/Mission';
@@ -8,7 +8,7 @@ import MyProfile from './pages/MyProfile';
 
 const App = () => (
   <Router>
-    <Header />
+    <Nav />
     <Routes>
       <Route path="/" element={<Rockets />} />
       <Route path="/Missions" element={<Missions />} />
