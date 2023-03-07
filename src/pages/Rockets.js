@@ -1,7 +1,13 @@
 import React from 'react';
+import Rocket from '../components/Rockets';
 
-export const Rockets = () => (
-  <div />
+const Rockets = () => (
+  <>
+    <div>
+      <Rocket />
+    </div>
+  </>
+
 );
 
 export default Rockets;
