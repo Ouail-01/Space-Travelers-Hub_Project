@@ -1,33 +1,33 @@
 .empty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 93vh;
-    font-size: 40px;
-    color: rgb(102, 102, 102);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 93vh;
+  font-size: 40px;
+  color: rgb(102, 102, 102);
 }
 
 .profileHandler {
-    display: flex;
-    width: 95%;
-    margin: 50px auto;
+  display: flex;
+  width: 95%;
+  margin: 50px auto;
 }
 
 .profileHandler ul {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .profileHandler li {
-    width: 95%;
-    border: 2px solid rgb(135, 135, 135);
-    padding: 35px 27px;
-    list-style: none;
+  width: 95%;
+  border: 2px solid rgb(135, 135, 135);
+  padding: 35px 27px;
+  list-style: none;
 }
 
 .missions {
-    width: 50%;
+  width: 50%;
 }
 
 .rockets {
-    width: 50%;
+  width: 50%;
 }
