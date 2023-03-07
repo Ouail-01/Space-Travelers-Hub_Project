@@ -1,0 +1,35 @@
+.missionTable {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 40px auto;
+}
+
+.missionTable th {
+  text-align: left;
+  padding: 12px;
+  border: 2px solid rgb(200, 200, 200);
+}
+
+.missionTable td {
+  padding: 12px;
+  border: 2px solid rgb(200, 200, 200);
+}
+
+.missionTable tr:nth-child(even) {
+  background-color: rgb(221, 221, 221);
+}
+
+.missionTable button {
+  min-width: 100px;
+  background-color: transparent;
+  color: rgb(143, 143, 143);
+  border-color: rgb(143, 143, 143);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.missionTable p {
+  min-width: 115px;
+  text-align: center;
+  font-size: 15px;
+}
