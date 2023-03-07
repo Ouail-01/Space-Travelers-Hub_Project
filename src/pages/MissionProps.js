@@ -21,11 +21,16 @@ const MissionProps = (props) => {
     <tr id={id}>
       <td>{missionName}</td>
       <td>{description}</td>
-      <td><p>{reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</p></td>
+      <td>
+        {reserved ?
+          <p className="leavePar">Active Member</p>:
+          <p>NOT A MEMBER</p>
+        }
+      </td>
       <td>
         {!reserved ?
-        <button type="button" onClick={join}>Join Mission</button>
-        :<button type="button" onClick={leave}>Leave Mission</button>
+        <button className="join" type="button" onClick={join}>Join Mission</button>
+        :<button className="leave" type="button" onClick={leave}>Leave Mission</button>
         }
       </td>
     </tr>

@@ -19,17 +19,45 @@
   background-color: rgb(221, 221, 221);
 }
 
-.missionTable button {
-  min-width: 100px;
-  background-color: transparent;
-  color: rgb(143, 143, 143);
-  border-color: rgb(143, 143, 143);
-  font-size: 17px;
-  cursor: pointer;
-}
-
 .missionTable p {
-  min-width: 115px;
+  min-width: 125px;
   text-align: center;
   font-size: 15px;
+  background: rgb(85, 85, 85);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.missionTable .leavePar {
+  background: rgb(32, 167, 176);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+
+}
+
+
+.missionTable button {
+  min-width: 115px;
+  background-color: transparent;
+  color: rgb(85, 85, 85);
+  border-color: rgb(85, 85, 85);
+  font-size: 17px;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.missionTable .leave {
+  min-width: 115px;
+  background-color: transparent;
+  color: rgb(255, 90, 90);
+  border-color: rgb(255, 90, 90);
+  font-size: 17px;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
