@@ -1,17 +1,57 @@
-import { useEffect } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchRockets } from '../redux/rockets/rocketSlice';
+import PropTypes from 'prop-types';
+import {
+  cancelReservation,
+  reserveRocket,
+} from '../redux/rockets/rocketSlice';
 
-const Rocket = () => {
+function Rocket(props) {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+  const {
+    id, name, description, img, reserved,
+  } = props;
   return (
-    <div>
-      <h1>Space rockets</h1>
+    <div className="rocketContainer">
+      <img src={img} alt={name} />
+      <div className="rocketInfo">
+        <h2 className="rocketTitle">{name}</h2>
+        <p className="rocketDesc">
+          {reserved && <span className="reserved">Reserved</span>}
+          {description}
+        </p>
+        {reserved ? (
+          <button
+            className="cancelReservation"
+            type="button"
+            onClick={() => {
+              dispatch(cancelReservation(id));
+            }}
+          >
+            Cancel Reservation
+          </button>
+        ) : (
+          <button
+            className="reserveRocket"
+            type="button"
+            onClick={() => {
+              dispatch(reserveRocket(id));
+            }}
+          >
+            Reserve Rocket
+          </button>
+        )}
+      </div>
     </div>
   );
-};
+}
+
+Rocket.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  img: PropTypes.string,
+  reserved: PropTypes.bool,
+}.isRequired;
 
 export default Rocket;

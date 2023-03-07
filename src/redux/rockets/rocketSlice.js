@@ -1,33 +1,52 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const FETCH_ROCKETS = ' FETCH_ROCKETS';
-const initialState = [];
+const url = 'https://api.spacexdata.com/v4/rockets';
 
-export const fetchRockets = createAsyncThunk(
-  FETCH_ROCKETS,
-  async (_, { dispatch }) => {
-    const response = await fetch('https://api.spacexdata.com/v3/rockets');
-    const data = await response.json();
-    const rockets = data.map((item) => ({
-      id: item.rocket_id,
-      name: item.rocket_name,
-      type: item.rocket_type,
-      image: item.flickr_images[0],
-    }));
-    dispatch({
-      type: FETCH_ROCKETS,
-      payload: rockets,
+const rockets = [];
+
+export const fetchRockets = createAsyncThunk('rocket/fetch', async () => {
+  const response = await axios.get(url);
+  if (response.data) {
+    return response.data;
+  }
+  return [];
+});
+
+const rocketsSlice = createSlice({
+  name: 'rocket',
+  initialState: rockets,
+  reducers: {
+    reserveRocket(state, action) {
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return { ...rocket };
+        }
+        return { ...rocket, reserved: true };
+      });
+    },
+    cancelReservation(state, action) {
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return { ...rocket };
+        }
+        return { ...rocket, reserved: false };
+      });
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchRockets.fulfilled, (state, action) => {
+      const newState = action.payload.map((rocket) => ({
+        id: rocket.id,
+        name: rocket.name,
+        description: rocket.description,
+        flickr_images: rocket.flickr_images,
+        reserve: false,
+      }));
+      state.push(...newState);
     });
   },
-);
+});
 
-const rocketReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case FETCH_ROCKETS.fulfilled:
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-export default rocketReducer;
+export const { reserveRocket, cancelReservation } = rocketsSlice.actions;
+export default rocketsSlice.reducer;
