@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 function MyProfile() {
-  const { missions } = useSelector((state) => state.missions);
+  const missions = useSelector((state) => state.missions);
   const reservedMissions = missions.filter((item) => item.reserved === true);
 
   const rockets = useSelector((state) => state.rockets);
