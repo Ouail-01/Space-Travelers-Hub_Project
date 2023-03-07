@@ -1,8 +1,7 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { joinMission, leaveMission } from '../redux/missions/missionSlice';
 import { useDispatch } from 'react-redux';
+import { joinMission, leaveMission } from '../redux/missions/missionSlice';
 
 const MissionProps = (props) => {
   const {
@@ -12,26 +11,24 @@ const MissionProps = (props) => {
   const dispatch = useDispatch();
   const join = () => {
     dispatch(joinMission(id));
-  }
+  };
   const leave = () => {
     dispatch(leaveMission(id));
-  }
+  };
 
   return (
     <tr id={id}>
       <td>{missionName}</td>
       <td>{description}</td>
       <td>
-        {reserved ?
-          <p className="leavePar">Active Member</p>:
-          <p>NOT A MEMBER</p>
-        }
+        {reserved
+          ? <p className="leavePar">Active Member</p>
+          : <p>NOT A MEMBER</p>}
       </td>
       <td>
-        {!reserved ?
-        <button className="join" type="button" onClick={join}>Join Mission</button>
-        :<button className="leave" type="button" onClick={leave}>Leave Mission</button>
-        }
+        {!reserved
+          ? <button className="join" type="button" onClick={join}>Join Mission</button>
+          : <button className="leave" type="button" onClick={leave}>Leave Mission</button>}
       </td>
     </tr>
   );

@@ -1,4 +1,3 @@
-/* eslint-disable */
 const FETCHMISSION = 'spacetravelers/missions/FETCHMISSION';
 const JOINMISSION = 'spacetravelers/missions/JOINMISSION';
 const LEAVEMISSION = 'spacetravelers/missions/LEAVEMISSION';
@@ -9,18 +8,18 @@ const missionReduce = (state = [], action) => {
       return action.mission;
     case JOINMISSION:
       return state.map((mission) => {
-        if (mission.id !== action.payload){
+        if (mission.id !== action.payload) {
           return mission;
         }
-        return {...mission, reserved: true}
-      })
+        return { ...mission, reserved: true };
+      });
     case LEAVEMISSION:
       return state.map((mission) => {
-        if (mission.id !== action.payload){
+        if (mission.id !== action.payload) {
           return mission;
         }
-        return {...mission, reserved: false}
-      })
+        return { ...mission, reserved: false };
+      });
     default:
       return state;
   }
@@ -46,11 +45,11 @@ export const missionLoad = () => async (dispatch) => {
 export const joinMission = (id) => ({
   type: JOINMISSION,
   payload: id,
-})
+});
 
 export const leaveMission = (id) => ({
   type: LEAVEMISSION,
   payload: id,
-})
+});
 
 export default missionReduce;
