@@ -1,9 +1,28 @@
+/* eslint-disable */
 const FETCHMISSION = 'spacetravelers/missions/FETCHMISSION';
+const JOINMISSION = 'spacetravelers/missions/JOINMISSION';
+const LEAVEMISSION = 'spacetravelers/missions/LEAVEMISSION';
 
 const missionReduce = (state = [], action) => {
   switch (action.type) {
     case FETCHMISSION:
       return action.mission;
+    case JOINMISSION:
+      return state.map((mission) => {
+        if (mission.id !== action.payload){
+          console.log("Joigning");
+          return mission;
+        }
+        return {...mission, reserved: true}
+      })
+    case LEAVEMISSION:
+      return state.map((mission) => {
+        if (mission.id !== action.payload){
+          console.log("leaving");
+          return mission;
+        }
+        return {...mission, reserved: false}
+      })
     default:
       return state;
   }
@@ -25,5 +44,15 @@ export const missionLoad = () => async (dispatch) => {
   }));
   dispatch(missionFetch(missionsFetched));
 };
+
+export const joinMission = (mission) => ({
+  type: JOINMISSION,
+  mission,
+})
+
+export const leaveMission = (mission) => ({
+  type: JOINMISSION,
+  mission,
+})
 
 export default missionReduce;
