@@ -22,7 +22,7 @@ const Nav = () => (
     </li>
     <div className="Line-2" />
     <li>
-      <Link className="link" to="/My Profile">
+      <Link className="link" to="/MyProfile">
         My Profile
       </Link>
     </li>
