@@ -37,9 +37,7 @@
   border-radius: 10px;
   color: #fff;
   font-size: 18px;
-
 }
-
 
 .missionTable button {
   min-width: 115px;
@@ -51,6 +49,7 @@
   padding-top: 7px;
   padding-bottom: 7px;
 }
+
 .missionTable .leave {
   min-width: 115px;
   background-color: transparent;
