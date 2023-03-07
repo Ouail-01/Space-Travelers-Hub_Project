@@ -45,14 +45,14 @@ export const missionLoad = () => async (dispatch) => {
   dispatch(missionFetch(missionsFetched));
 };
 
-export const joinMission = (mission) => ({
+export const joinMission = (id) => ({
   type: JOINMISSION,
-  mission,
+  payload: id,
 })
 
-export const leaveMission = (mission) => ({
+export const leaveMission = (id) => ({
   type: JOINMISSION,
-  mission,
+  payload: id,
 })
 
 export default missionReduce;
