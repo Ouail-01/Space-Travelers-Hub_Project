@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './MyProfile.css';
 
 function MyProfile() {
   const missions = useSelector((state) => state.missions);
@@ -9,12 +10,12 @@ function MyProfile() {
   const reservedRockets = rockets.filter((item) => item.reserved === true);
 
   if (reservedMissions.length === 0 && reservedRockets.length === 0) {
-    return <div>No reserved rockets/missions</div>;
+    return <div className="empty">No reserved Rockets/Missions</div>;
   }
 
   return (
-    <div>
-      <div>
+    <div className="profileHandler">
+      <div className="missions">
         <h2>My Missions</h2>
         <ul>
           {reservedMissions.map((item) => (
@@ -22,7 +23,7 @@ function MyProfile() {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="rockets">
         <h2>My Rockets</h2>
         <ul>
           {reservedRockets.map((rocket) => (
