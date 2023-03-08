@@ -54,12 +54,11 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="To-Do-List"></a>
 
-> Coming soon!!
+- [Live Demo Link](https://ouail-01.github.io/Space-Travelers-Hub_Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
@@ -130,4 +129,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT]() licensed.
+This project is [MIT](./LICENSE) licensed.
