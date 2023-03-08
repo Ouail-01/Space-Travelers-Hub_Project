@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import store from '../Redux/configureStore';
 import MyProfile from '../components/MyProfile';
+import store from '../redux/configureStore';
 
 const ProfileProvider = () => (
   <Provider store={store}>
