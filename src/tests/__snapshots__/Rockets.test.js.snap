@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket matches snapshot 1`] = `
+<div
+  className="rocketContainer"
+>
+  <img
+    alt="Falcon 1"
+    src="https://images.example.com/falcon1.jpg"
+  />
+  <div
+    className="rocketInfo"
+  >
+    <h2
+      className="rocketTitle"
+    >
+      Falcon 1
+    </h2>
+    <p
+      className="rocketDesc"
+    >
+      A two-stage rocket designed and manufactured by SpaceX.
+    </p>
+    <button
+      className="reserveRocket"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</div>
+`;
