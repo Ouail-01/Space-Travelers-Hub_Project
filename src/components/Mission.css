@@ -1,0 +1,62 @@
+.missionTable {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 40px auto;
+}
+
+.missionTable th {
+  text-align: left;
+  padding: 12px;
+  border: 2px solid rgb(200, 200, 200);
+}
+
+.missionTable td {
+  padding: 12px;
+  border: 2px solid rgb(200, 200, 200);
+}
+
+.missionTable tr:nth-child(even) {
+  background-color: rgb(221, 221, 221);
+}
+
+.missionTable p {
+  min-width: 125px;
+  text-align: center;
+  font-size: 15px;
+  background: rgb(85, 85, 85);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.missionTable .leavePar {
+  background: rgb(32, 167, 176);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.missionTable button {
+  min-width: 115px;
+  background-color: transparent;
+  color: rgb(85, 85, 85);
+  border-color: rgb(85, 85, 85);
+  font-size: 17px;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.missionTable .leave {
+  min-width: 115px;
+  background-color: transparent;
+  color: rgb(255, 90, 90);
+  border-color: rgb(255, 90, 90);
+  font-size: 17px;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}

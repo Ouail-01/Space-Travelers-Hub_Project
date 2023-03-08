@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the profile component Should be render profile correctly 1`] = `
+<div
+  className="empty"
+>
+  No reserved Rockets/Missions
+</div>
+`;

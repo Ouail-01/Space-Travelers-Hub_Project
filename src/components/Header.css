@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  border-bottom: 1px solid gray;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.nav li:nth-child(2) {
+  margin-left: auto;
+}
+
+.nav img {
+  height: 70px;
+  object-fit: contain;
+}
+
+.nav h1 {
+  margin-left: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(0, 149, 255);
+}
+
+.Line-2 {
+  background: #000;
+  width: 0.125rem;
+  height: 1.5rem;
+  margin-right: 1.063rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
