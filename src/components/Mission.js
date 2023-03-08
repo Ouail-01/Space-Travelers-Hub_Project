@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { missionLoad } from '../redux/missions/missionSlice';
-import MissionProps from './MissionProps';
+import MissionProps from '../pages/MissionProps';
 import './Mission.css';
 
 const Missions = () => {
